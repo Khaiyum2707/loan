@@ -771,9 +771,21 @@
         </div>
     </div>
     </div>
-
+    <style>
+        a.custom-link {
+            text-decoration: none;
+            font-weight: bold;
+            color: white; /* Default color */
+            transition: color 0.3s ease; /* Smooth transition effect */
+        }
+        a.custom-link:hover {
+            color: #cccccc; /* Slightly darker shade */
+        }
+    </style>
     <footer>
-        <p>© Hak Cipta Terpelihara 2024 - <b>I.Destinasi Sdn Bhd (IDSB)</b></p>
+        <p>© Hak Cipta Terpelihara 2024 -
+            <a href="https://idsb.com.my" class="custom-link">I.Destinasi Sdn. Bhd.</a>
+        </p>
     </footer>
 
     <script>
