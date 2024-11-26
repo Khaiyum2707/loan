@@ -417,3 +417,139 @@
                 /* Remove margin on small screens */
             }
         }
+
+
+  /* Restrict styles to the upload component only */
+.upload-container {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top, #4F6072, #8699AA);
+    height: auto; /* Allow flexibility */
+    padding: 20px;
+  }
+  
+  /* Upload component styles */
+  .upload-container .upload {
+    position: relative;
+    width: 400px;
+    min-height: 445px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding-bottom: 20px;
+    background: #fff;
+    animation: fadeup 0.5s 0.5s ease both;
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  
+  .upload-container .upload header {
+    background: #4db6ac; /* Skin color */
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    text-align: center;
+  }
+  
+  .upload-container .upload header p {
+    color: #fff;
+    font-size: 40px;
+    margin: 0;
+    padding: 50px 0;
+  }
+  
+  .upload-container .upload header p i {
+    transform: translateY(20px);
+    opacity: 0;
+    font-size: 30px;
+    animation: fadeup 0.5s 1s ease both;
+  }
+  
+  .upload-container .upload .body {
+    text-align: center;
+    padding: 50px 0;
+    padding-bottom: 30px;
+  }
+  
+  .upload-container .upload .body i {
+    font-size: 65px;
+    color: lightgray;
+  }
+  
+  .upload-container .upload .body p {
+    font-size: 14px;
+    padding-top: 15px;
+    line-height: 1.4;
+  }
+  
+  .upload-container .upload footer {
+    width: 100%;
+    margin: 0 auto;
+    height: 0;
+  }
+  
+  .upload-container .upload footer .divider {
+    margin: 0 auto;
+    width: 0;
+    border-top: solid 4px darken(#4db6ac, 3.5%);
+    text-align: center;
+    overflow: hidden;
+    transition: width 0.5s ease;
+  }
+  
+  .upload-container .upload footer .list-files {
+    width: 320px;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding-left: 5px;
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 210px;
+  }
+  
+  /* Progress and File List */
+  .upload-container .upload footer .list-files .file {
+    width: 300px;
+    min-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .upload-container .upload footer .list-files .file .progress {
+    width: 175px;
+    height: 5px;
+    border: solid 1px lightgray;
+    border-radius: 2px;
+    background: linear-gradient(to left, rgba(77, 182, 172, 0.2), rgba(77, 182, 172, 0.8)) no-repeat;
+    background-size: 100% 100%;
+  }
+  
+  .upload-container .upload footer .importar {
+    width: 125px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    margin: auto;
+    border: solid 1px #4db6ac;
+    color: #4db6ac;
+    background: transparent;
+    padding: 8px 15px;
+    font-size: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Animations */
+  @keyframes fadeup {
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+
+        

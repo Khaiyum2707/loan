@@ -9,7 +9,8 @@
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="{{ asset('landing.css') }}">   
+    <script href="{{ asset('js/welcome.js')}}"></script>
+    <link rel="stylesheet" href="{{ asset('landing.css') }}">
 </head>
 
 <body>
@@ -334,13 +335,40 @@
                         </div>
 
                         <!-- File upload field -->
-                        <div class="mb-3">
+                        <!-- <div class="mb-3">
                             <label for="formFileMultiple" class="form-label">Upload Files</label>
                             <input class="form-control" type="file" id="formFileMultiple" name="files[]"
                                 multiple>
                             <div id="fileError" class="text-danger mt-1" style="display: none;">All files must be in
                                 PDF format.</div>
-                        </div>
+                        </div> -->
+
+                        <div class="upload-container">
+                            <div class="upload">
+                              <header>
+                                <p>
+                                  <i class="fa fa-cloud-upload" aria-hidden="true"></i>
+                                  <span>Upload Files</span>
+                                </p>
+                              </header>
+                              <div class="body" id="drop">
+                                <i class="fa fa-file-text-o pointer-none" aria-hidden="true"></i>
+                                <p>
+                                  <b>Drag and drop</b> files here<br />
+                                  or <a href="#" onclick="document.getElementById('fileInput').click();">browse</a> to begin the upload
+                                </p>
+                                <input type="file" id="fileInput" multiple />
+                              </div>
+                              <footer>
+                                <div class="divider"></div>
+                                <div class="list-files"></div>
+                                <button class="importar">Update Files</button>
+                              </footer>
+                            </div>
+                          </div>
+                          
+
+
 
                         <!-- Submit button -->
                         <button type="submit" class="btn btn-primary">Submit</button>
@@ -357,11 +385,15 @@
         a.custom-link {
             text-decoration: none;
             font-weight: bold;
-            color: white; /* Default color */
-            transition: color 0.3s ease; /* Smooth transition effect */
+            color: white;
+            /* Default color */
+            transition: color 0.3s ease;
+            /* Smooth transition effect */
         }
+
         a.custom-link:hover {
-            color: #cccccc; /* Slightly darker shade */
+            color: #cccccc;
+            /* Slightly darker shade */
         }
     </style>
     <footer>
@@ -370,76 +402,7 @@
         </p>
     </footer>
 
-    <script>
-        document.getElementById('exampleFormControlIC').addEventListener('input', function() {
-            const inputField = this;
-            const icError = document.getElementById('icError');
-
-            // Check if the input length is not 12
-            if (inputField.value.length > 0 && inputField.value.length !== 12) {
-                icError.style.display = 'block'; // Show error message
-            } else {
-                icError.style.display = 'none'; // Hide error message
-            }
-        });
-
-        document.querySelector('form').addEventListener('submit', function(event) {
-            const inputField = document.getElementById('exampleFormControlIC');
-            if (inputField.value.length !== 12) {
-                alert('IC Number must be exactly 12 digits.');
-                event.preventDefault(); // Prevent form submission
-            }
-        });
-
-
-        document.getElementById('formFileMultiple').addEventListener('change', function() {
-            const allowedExtensions = ['pdf'];
-            const files = this.files;
-            const fileError = document.getElementById('fileError');
-            let allValid = true;
-
-            // Check if the number of files is exactly 9
-            if (files.length !== 9) {
-                fileError.textContent = 'You must upload exactly 9 files.';
-                fileError.style.display = 'block';
-                alert('You must upload exactly 9 files.');
-                this.value = ''; // Clear the input
-                return;
-            }
-
-            // Validate file types
-            for (let i = 0; i < files.length; i++) {
-                const file = files[i];
-                const fileExtension = file.name.split('.').pop().toLowerCase();
-
-                if (!allowedExtensions.includes(fileExtension)) {
-                    allValid = false;
-                    break;
-                }
-            }
-
-            if (!allValid) {
-                fileError.textContent = 'All uploaded files must be in PDF format.';
-                fileError.style.display = 'block';
-                alert('All uploaded files must be in PDF format.');
-                this.value = ''; // Clear the input
-            } else {
-                fileError.style.display = 'none'; // Hide error message
-            }
-        });
-
-        document.querySelector('form').addEventListener('submit', function(event) {
-            const fileInput = document.getElementById('formFileMultiple');
-            const fileError = document.getElementById('fileError');
-
-            // Check if the input was cleared due to validation issues
-            if (!fileInput.value) {
-                event.preventDefault(); // Prevent form submission
-                alert('Please upload 9 valid PDF files.');
-                fileError.style.display = 'block';
-            }
-        });
-    </script>
+    
 
 
 </body>
