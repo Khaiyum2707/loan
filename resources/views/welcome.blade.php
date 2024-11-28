@@ -9,427 +9,10 @@
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <style>
-        .bg-transparent {
-            background-color: transparent !important;
-            transition: background-color 0.3s ease-in-out;
-            /* Smooth transition */
-        }
-
-        /* White background for navbar */
-        .bg-white-scroll {
-            background-color: white !important;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            /* Optional shadow for better contrast */
-            transition: background-color 0.3s ease-in-out;
-            /* Smooth transition */
-        }
-
-        /* Add some padding to avoid content being hidden under the fixed navbar */
-        body {
-            padding-top: 70px;
-            /* Adjust according to your navbar height */
-        }
-
-        body {
-            background-color: #007bb5;
-            /* Adjust background color */
-            color: white;
-            font-family: Arial, sans-serif;
-        }
-
-        .content-wrapper {
-            padding: 50px 15px;
-            text-align: left;
-        }
-
-        .btn-apply {
-            background-color: #ffcc00;
-            color: #333;
-            border-radius: 20px;
-            padding: 10px 20px;
-            font-weight: bold;
-        }
-
-        h1 {
-            font-size: 3rem;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-
-        p {
-            font-size: 1.1rem;
-            margin-bottom: 30px;
-        }
-
-        /* Card Section Styling */
-        .card-section {
-            padding: 50px 0;
-        }
-
-        .card-custom {
-            background-color: white;
-            color: #333;
-            border-radius: 10px;
-            padding: 20px;
-            height: 270px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: left;
-        }
-
-        .icon {
-            font-size: 2rem;
-            color: #007bb5;
-            margin-bottom: 15px;
-        }
-
-        .card-title {
-            font-weight: bold;
-            color: #333;
-        }
-
-        .card-text {
-            color: #666;
-        }
-
-        .tahun {
-            font-weight: 600;
-        }
-
-        .main-title {
-            background-color: white;
-            /* Warna latar belakang */
-            color: #ffffff;
-            /* Warna teks */
-            padding: 20px;
-            /* Ruang dalam */
-            border-radius: 8px;
-            /* Sudut bulat (pilihan) */
-            text-align: center;
-            /* Pusatkan teks */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            /* Bayang untuk kesan 3D */
-            /* Lebar maksimum */
-            margin: 20px auto;
-            /* Pusatkan elemen secara automatik */
-        }
+    <link rel="stylesheet" href="{{ asset('landing.css') }}">
 
 
-        .main-title h1 {
-            font-size: 2rem;
-            color: black;
-            /* Saiz teks */
-            margin: 0;
-            /* Buang margin lalai */
-        }
-
-        .main-title1 {
-            background-color: white;
-            /* Warna latar belakang */
-            padding: 20px;
-            /* Ruang dalam */
-            text-align: center;
-            /* Pusatkan teks */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            /* Bayang untuk kesan 3D */
-            /* Lebar maksimum */
-            margin: 20px auto;
-            /* Pusatkan elemen secara automatik */
-        }
-
-        .main-title1 h1 {
-            font-size: 2rem;
-            color: black;
-            /* Saiz teks */
-            margin: 0;
-            /* Buang margin lalai */
-        }
-
-        .list p {
-            text-align: center;
-            color: white;
-            font-size: 3ch;
-        }
-
-        .main-title2 {
-            background-color: white;
-            /* Warna latar belakang */
-            color: #ffffff;
-            /* Warna teks */
-            padding: 20px;
-            /* Ruang dalam */
-            text-align: center;
-            /* Pusatkan teks */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            /* Bayang untuk kesan 3D */
-            /* Lebar maksimum */
-            margin: 20px auto;
-            /* Pusatkan elemen secara automatik */
-        }
-
-        .main-title2 h1 {
-            font-size: 2rem;
-            color: black;
-            /* Saiz teks */
-            margin: 0;
-            /* Buang margin lalai */
-        }
-
-        .main-title2 p {
-            font-size: 1.5rem;
-            color: black;
-            /* Saiz teks */
-            margin: 0;
-            text-align: left;
-        }
-
-        .box-container {
-            background-color: #f9f9f9;
-            /* Light grey background */
-            border: 2px solid #ccc;
-            /* Light border */
-            border-radius: 8px;
-            /* Rounded corners */
-            padding: 20px;
-            width: 80%;
-            /* Adjust width as needed */
-            margin: 0 auto;
-            /* Center the box */
-        }
-
-        /* Optional: Add a slight shadow to the box */
-        .box-container {
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .form-control {
-            color: black;
-            /* Medium grey */
-            font-weight: 400;
-            /* Normal font weight */
-        }
-
-        .form-label {
-            color: black;
-            /* Medium grey */
-            font-weight: 400;
-            /* Normal font weight */
-        }
-
-        ::placeholder {
-            color: #555555;
-            /* Medium grey */
-            font-weight: 400;
-            /* Normal font weight (if applicable) */
-        }
-
-        .info-text {
-            color: black;
-        }
-
-        /* FAQ Section Styling */
-        .faq-section {
-            margin-top: 40px;
-        }
-
-        .faq-section h2 {
-            font-size: 22px;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .faq {
-            background-color: #f1f1f1;
-            padding: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .faq-item {
-            margin-bottom: 15px;
-        }
-
-        .faq-item .question {
-            color: black;
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .faq-item .answer {
-            font-size: 16px;
-            margin-left: 20px;
-            color: #555;
-        }
-
-        /* Style for the footer */
-        footer {
-            background-color: #333;
-            /* Dark background */
-            color: #fff;
-            /* White text */
-            text-align: center;
-            /* Center the text */
-            padding: 10px 0;
-            /* Padding around the text */
-            font-size: 14px;
-            /* Adjust the font size */
-            position: relative;
-            bottom: 0;
-            width: 100%;
-            margin-top: 40px;
-            /* Adds space between footer and content above */
-        }
-
-        footer p {
-            margin: 0;
-            /* Remove default margin */
-        }
-
-
-        #faq-new {
-            background-color: transparent;
-
-        }
-
-        /* Accordion Header */
-        #faqlist-new .accordion-header {
-            background-color: #28a745;
-            /* Green background for the header */
-            border: none;
-            /* Remove border */
-            border-radius: 8px 8px 0 0;
-            /* Rounded top corners */
-        }
-
-        #faqlist-new .accordion-header h3 {
-            background-color: #28a745;
-            /* Green background for the header */
-            border: none;
-            /* Remove border */
-            border-radius: 8px 8px 0 0;
-            /* Rounded top corners */
-        }
-
-        /* Button inside accordion header */
-        #faqlist-new .accordion-button {
-            font-size: 1.2rem;
-            /* Increase font size */
-            font-weight: bold;
-            /* Make the text bold */
-            color: #ffffff;
-            /* White text */
-            background-color: transparent;
-            /* Transparent background */
-            padding: 15px 20px;
-            /* More padding */
-            text-align: left;
-            /* Left align the text */
-            display: flex;
-            /* Use flexbox for alignment */
-            justify-content: space-between;
-            /* Space between text and icon */
-        }
-
-        /* Add hover effect to accordion button */
-        #faqlist-new .accordion-button:hover {
-            background-color: #218838;
-            /* Darker green on hover */
-            color: #ffffff;
-            /* Ensure text stays white on hover */
-        }
-
-        /* Style for the question icon */
-        .question-icon {
-            font-size: 1.5rem;
-            /* Increase icon size */
-            margin-right: 10px;
-            /* Space between icon and text */
-        }
-
-        /* Accordion Collapse */
-        #faqlist-new .accordion-collapse {
-            border: none;
-            /* Remove border */
-            background-color: #ffffff;
-            /* White background for the content */
-        }
-
-        /* Style for the body content of the accordion */
-        #faqlist-new .accordion-body {
-            padding: 20px;
-            /* Padding around the content */
-            background-color: #ffffff;
-            /* White background for content */
-            border: none;
-            /* Remove border */
-            border-radius: 0 0 8px 8px;
-            /* Rounded bottom corners */
-            font-weight: bold;
-            /* Make the content text bold */
-        }
-
-        /* List styling inside the accordion */
-        #faqlist-new .accordion-body ul {
-            padding-left: 20px;
-            /* Indentation for list items */
-        }
-
-        #faqlist-new .accordion-body li {
-            font-size: 1rem;
-            /* Slightly smaller text */
-            color: #333333;
-            /* Dark text for readability */
-            margin-bottom: 10px;
-            /* Space between list items */
-            font-weight: bold;
-            /* Make the list items bold */
-        }
-
-        /* Collapse icon style when opened */
-        #faqlist-new .accordion-button:not(.collapsed) {
-            background-color: #218838;
-            /* Change background when open */
-            color: #ffffff;
-            /* White text when open */
-        }
-
-        * Ensure that FAQ items are side by side */ #faq-new {
-            background-color: #f8f9fa;
-            /* Light background color */
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: none;
-        }
-
-        .faq-column {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-
-        .faq-column .col-lg-6 {
-            flex: 0 0 48%;
-            /* Set each column to take up 48% of the space */
-            margin-right: 1%;
-            /* Adjust right margin */
-            margin-bottom: 20px;
-            /* Space between columns on smaller screens */
-        }
-
-        /* Adjust for smaller screens */
-        @media (max-width: 991px) {
-            .faq-column .col-lg-6 {
-                flex: 0 0 100%;
-                /* Stack them on top of each other on smaller screens */
-                margin-right: 0;
-                /* Remove margin on small screens */
-            }
-        }
-    </style>
-</head>
-
+   
 <body>
 
     <!-- Navbar -->
@@ -575,7 +158,10 @@
             </div>
         </div>
     </div>
-    <h2 class="fw-bold">Soalan & Jawapan</h2>
+
+
+    <div class="container" style="max-width: 1500px; margin: 0 auto;"> <!-- Parent container -->
+        <h2 class="fw-bold text-center mb-4">Soalan & Jawapan</h2>
     <div class="accordion accordion-flush" id="accordionFlushExample">
         <div class="accordion-item">
             <h2 class="accordion-header" id="flush-headingOne">
@@ -619,36 +205,58 @@
             </div>
         </div>
 
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    <b>Bagaimanakah cara saya meminta penyelesaian penuh untuk pembiayaan ?</b>
+                </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <p>
+                        Sila hubungi IDSB di talian <b>03-40232266</b> atau e-mel kepada 
+                        <a href="mailto:info@idsb.com.my">info@idsb.com.my</a> untuk mendapatkan 
+                        <b>“Penyata Penyelesaian Penuh.”</b>
+                    </p>
+                </div>
+            </div>
+        </div>
 
-        <!-- FAQ Section -->
-        <div class="faq-section">
-            <h2><b>PENYELESAIAN PENUH PINJAMAN PERMULAAN RM10,000</b></h2>
-            <div class="faq">
-                <div class="faq-item">
-                    <h3 class="question">1. Bagaimanakah cara saya meminta penyelesaian penuh untuk pembiayaan
-                        awal
-                        RM10,000?</h3>
-                    <p class="answer">Sila hubungi IDSB di talian 03-40232266 atau e-mel kepada
-                        info@idsb.com.my untuk
-                        mendapatkan “Penyata Penyelesaian Penuh.”</p>
-                </div>
-                <div class="faq-item">
-                    <h3 class="question">2. Bagaimanakah cara saya membuat pembayaran balik untuk pembiayaan
-                        awal RM10,000?
-                    </h3>
-                    <p class="answer">i. Bayaran secara tunai sekaligus dengan mendapatkan “Penyata
-                        Penyelesaian Penuh”
-                        dengan menghubungi IDSB di talian 03-40232266 atau</p>
-                    <p class="answer">ii. “Pembiayaan Semula IDSB” (Minimum RM 20K, Maksimum RM 50K) dengan
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                    <b>Bagaimanakah cara saya membuat pembayaran balik untuk pembiayaan awal RM10,000?</b>
+                </button>
+            </h2>
+            <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <ul>
+                        <li> Bayaran secara tunai sekaligus dengan mendapatkan “PenyataPenyelesaian Penuh” dengan menghubungi IDSB di talian 03-40232266 atau</li>
+                    <li>“Pembiayaan Semula IDSB” (Minimum RM 20K, Maksimum RM 50K) dengan
                         memasuki alamat
-                        laman sesawang yang telah dihantar melalui SMS kedua kepada peminjam.</p>
+                        laman sesawang yang telah dihantar melalui SMS kedua kepada peminjam
+
+                    </li>
                 </div>
-                <div class="faq-item">
-                    <h3 class="question">3. Bagaimanakah cara saya mengetahui penbayaran balik saya telah
-                        diterima?</h3>
-                    <p class="answer">Surat penutupan akaun akan dihantar melalui e-mel dalam masa <b> (7)
-                            HARI</b> bekerja
-                        selepas pembayaran dilakukan.</p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                    <b>Bagaimanakah cara saya mengetahui penbayaran balik saya telah diterima?</b>
+                </button>
+            </h2>
+            <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <p> Surat penutupan akaun akan dihantar melalui e-mel dalam masa <b> (7)
+                        HARI</b> bekerja
+                    selepas pembayaran dilakukan.
+
+                    </p>
                 </div>
             </div>
         </div>
@@ -723,14 +331,14 @@
                         <div class="mb-3">
                             <label for="exampleFormControlName" class="form-label">Name</label>
                             <input type="text" class="form-control" id="exampleFormControlName" name="name"
-                                required>
+                                required placeholder="Nama Penuh">
                         </div>
 
                         <!-- IC Number input field -->
                         <div class="mb-3">
                             <label for="exampleFormControlIC" class="form-label">IC Number</label>
                             <input type="text" class="form-control" id="exampleFormControlIC" name="ic"
-                                placeholder="123456789012" pattern="\d{12}"
+                                placeholder="tanpa (-)" pattern="\d{12}"
                                 title="IC Number must be exactly 12 digits" required>
                             <div id="icError" class="text-danger mt-1" style="display: none;">IC Number must be
                                 exactly 12 digits.</div>
@@ -748,7 +356,7 @@
                         <div class="mb-3">
                             <label for="exampleFormControlInput2" class="form-label">Phone Number</label>
                             <input type="tel" class="form-control" id="exampleFormControlInput2" name="phone"
-                                placeholder="0123456789" required>
+                                placeholder="tanpa (-). Eg: 0123456789" required>
                         </div>
 
                         <!-- File upload field -->

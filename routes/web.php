@@ -11,6 +11,7 @@ use App\Http\Controllers\FormController;
 Route::get('/', [FormController::class, 'page']);
 Route::post('/', [FormController::class, 'store'])->name('formSubmit');
 
+
 /*Route::get('/test', function(){
     //try {
         //Mail::to('mohamad.khaiyum@idsb.com.my')->send(new Emails(null,null,null));
