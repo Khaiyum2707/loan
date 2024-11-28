@@ -10,11 +10,14 @@
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="{{ asset('landing.css') }}">
+    <script src="{{ asset('animation.js') }}"></script>
 
 
-   
+
+
+    <div class="loader"></div> 
 <body>
-
+   
     <!-- Navbar -->
     <nav id="navbar" class="navbar navbar-light fixed-top bg-transparent">
         <div class="container d-flex justify-content-between align-items-center">
@@ -263,13 +266,13 @@
     </div>
 
     <div class="container my-4">
-        <div class="row">
+        <div class="row d-flex align-items-stretch"> <!-- Flexbox row -->
             <!-- Left Side: Download Table -->
-            <div class="col-md-6">
-                <div class="p-4 border rounded bg-light">
+            <div class="col-md-6 d-flex"> <!-- Ensure it stretches -->
+                <div class="p-4 border rounded bg-light h-100">
                     <h4 class="mb-3" style="color: black; font-weight: 600;">Muat Turun Borang Permohonan
                     </h4>
-                    <table class="table table-bordered text-center">
+                    <table class="table table-bordered text-center flex-grow-1">
                         <thead class="thead-dark">
                             <tr>
                                 <th>No.</th>
@@ -309,7 +312,7 @@
                                     <td>{{ $index + 1 }}</td>
                                     <td class="text-start">{{ $file['name'] }}</td>
                                     <td><a href="{{ asset('doc/' . $file['file']) }}" class="btn btn-link"
-                                            download><b>Download</b></a></td>
+                                            download><b>Muat Turun</b></a></td>
                                 </tr>
                             @endforeach
                         </tbody>
@@ -320,23 +323,23 @@
 
 
             <!-- Right Side: Form -->
-            <div class="col-md-6">
-                <div id="formsection" class="p-4 border rounded bg-light">
-                    <h4 class="mb-3" style="color: black; font-weight: 600;">Form</h4>
+            <div class="col-md-6 d-flex"> <!-- Add d-flex to ensure the div stretches -->
+                <div id="formsection" class="p-4 border rounded bg-light w-100"> 
+                    <h4 class="mb-3" style="color: black; font-weight: 600;">Borang Maklumat Anda</h4>
 
                     <form action="{{ route('formSubmit') }}" method="POST" enctype="multipart/form-data">
                         @csrf
 
                         <!-- Name input field -->
                         <div class="mb-3">
-                            <label for="exampleFormControlName" class="form-label">Name</label>
+                            <label for="exampleFormControlName" class="form-label">Nama</label>
                             <input type="text" class="form-control" id="exampleFormControlName" name="name"
                                 required placeholder="Nama Penuh">
                         </div>
 
                         <!-- IC Number input field -->
                         <div class="mb-3">
-                            <label for="exampleFormControlIC" class="form-label">IC Number</label>
+                            <label for="exampleFormControlIC" class="form-label">Nombor IC</label>
                             <input type="text" class="form-control" id="exampleFormControlIC" name="ic"
                                 placeholder="tanpa (-)" pattern="\d{12}"
                                 title="IC Number must be exactly 12 digits" required>
@@ -347,21 +350,21 @@
 
                         <!-- Email input field -->
                         <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Email Address</label>
+                            <label for="exampleFormControlInput1" class="form-label">Alamat Emel</label>
                             <input type="email" class="form-control" id="exampleFormControlInput1" name="email"
                                 required>
                         </div>
 
                         <!-- Phone number input field -->
                         <div class="mb-3">
-                            <label for="exampleFormControlInput2" class="form-label">Phone Number</label>
+                            <label for="exampleFormControlInput2" class="form-label">Nombor Telefon Bimbit</label>
                             <input type="tel" class="form-control" id="exampleFormControlInput2" name="phone"
                                 placeholder="tanpa (-). Eg: 0123456789" required>
                         </div>
 
                         <!-- File upload field -->
                         <div class="mb-3">
-                            <label for="formFileMultiple" class="form-label">Upload Files</label>
+                            <label for="formFileMultiple" class="form-label">Muat Naik fail-fail di sini</label>
                             <input class="form-control" type="file" id="formFileMultiple" name="files[]"
                                 multiple>
                             <div id="fileError" class="text-danger mt-1" style="display: none;">All files must be in
@@ -369,7 +372,7 @@
                         </div>
 
                         <!-- Submit button -->
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary">Hantar</button>
                     </form>
 
 
