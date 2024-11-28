@@ -258,25 +258,15 @@ p {
     color: #555;
 }
 
-/* Style for the footer */
 footer {
-    background-color: #333;
-    /* Dark background */
-    color: #fff;
-    /* White text */
-    text-align: center;
-    /* Center the text */
-    padding: 10px 0;
-    /* Padding around the text */
-    font-size: 14px;
-    /* Adjust the font size */
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    margin-top: 40px;
-    /* Adds space between footer and content above */
+    background-color: #333;  /* Dark background */
+    color: #fff;             /* White text */
+    text-align: center;      /* Center the text */
+    padding: 10px 0;         /* Padding around the text */
+    font-size: 14px;         /* Adjust the font size */
+    position: relative;      
+    box-sizing: border-box;  /* Include padding and borders in width calculation */
 }
-
 footer p {
     margin: 0;
     /* Remove default margin */

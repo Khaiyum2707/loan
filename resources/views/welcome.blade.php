@@ -9,7 +9,6 @@
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-<<<<<<< HEAD
     <link rel="stylesheet" href="{{ asset('landing.css') }}">
     <script src="{{ asset('animation.js') }}"></script>
 
@@ -17,12 +16,6 @@
 
 
     <div class="loader"></div> 
-=======
-    <script href="{{ asset('js/welcome.js')}}"></script>
-    <link rel="stylesheet" href="{{ asset('landing.css') }}">
-</head>
-
->>>>>>> 908753602cfbd1926760667ff9ee51c0d00498cb
 <body>
    
     <!-- Navbar -->
@@ -370,42 +363,17 @@
                         </div>
 
                         <!-- File upload field -->
-<<<<<<< HEAD
+
                         <div class="mb-3">
                             <label for="formFileMultiple" class="form-label">Muat Naik fail-fail di sini</label>
-=======
-                        <!-- <div class="mb-3">
+                        <div class="mb-3">
                             <label for="formFileMultiple" class="form-label">Upload Files</label>
->>>>>>> 908753602cfbd1926760667ff9ee51c0d00498cb
+
                             <input class="form-control" type="file" id="formFileMultiple" name="files[]"
                                 multiple>
                             <div id="fileError" class="text-danger mt-1" style="display: none;">All files must be in
                                 PDF format.</div>
-                        </div> -->
-
-                        <div class="upload-container">
-                            <div class="upload">
-                              <header>
-                                <p>
-                                  <i class="fa fa-cloud-upload" aria-hidden="true"></i>
-                                  <span>Upload Files</span>
-                                </p>
-                              </header>
-                              <div class="body" id="drop">
-                                <i class="fa fa-file-text-o pointer-none" aria-hidden="true"></i>
-                                <p>
-                                  <b>Drag and drop</b> files here<br />
-                                  or <a href="#" onclick="document.getElementById('fileInput').click();">browse</a> to begin the upload
-                                </p>
-                                <input type="file" id="fileInput" multiple />
-                              </div>
-                              <footer>
-                                <div class="divider"></div>
-                                <div class="list-files"></div>
-                                <button class="importar">Update Files</button>
-                              </footer>
-                            </div>
-                          </div>
+                        </div> 
                           
 
 
@@ -436,10 +404,9 @@
             /* Slightly darker shade */
         }
     </style>
+    
     <footer>
-        <p>© Hak Cipta Terpelihara 2024 -
-            <a href="https://idsb.com.my" class="custom-link">I.Destinasi Sdn. Bhd.</a>
-        </p>
+        <p>© Hak Cipta Terpelihara 2024 -<a href="https://idsb.com.my" class="custom-link">I.Destinasi Sdn. Bhd.</a></p>
     </footer>
 
     
