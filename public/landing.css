@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .bg-transparent {
     background-color: transparent !important;
     transition: background-color 0.3s ease-in-out;
@@ -452,3 +453,560 @@ footer p {
   }
   
   
+=======
+
+
+
+        .bg-transparent {
+            background-color: transparent !important;
+            transition: background-color 0.3s ease-in-out;
+            /* Smooth transition */
+        }
+
+        /* White background for navbar */
+        .bg-white-scroll {
+            background-color: white !important;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            /* Optional shadow for better contrast */
+            transition: background-color 0.3s ease-in-out;
+            /* Smooth transition */
+        }
+
+        /* Add some padding to avoid content being hidden under the fixed navbar */
+        body {
+            padding-top: 70px;
+            /* Adjust according to your navbar height */
+        }
+
+        body {
+            background-color: #007bb5;
+            /* Adjust background color */
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .content-wrapper {
+            padding: 50px 15px;
+            text-align: left;
+        }
+
+        .btn-apply {
+            background-color: #ffcc00;
+            color: #333;
+            border-radius: 20px;
+            padding: 10px 20px;
+            font-weight: bold;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        /* Card Section Styling */
+        .card-section {
+            padding: 50px 0;
+        }
+
+        .card-custom {
+            background-color: white;
+            color: #333;
+            border-radius: 10px;
+            padding: 20px;
+            height: 270px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .icon {
+            font-size: 2rem;
+            color: #007bb5;
+            margin-bottom: 15px;
+        }
+
+        .card-title {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .card-text {
+            color: #666;
+        }
+
+        .tahun {
+            font-weight: 600;
+        }
+
+        .main-title {
+            background-color: white;
+            /* Warna latar belakang */
+            color: #ffffff;
+            /* Warna teks */
+            padding: 20px;
+            /* Ruang dalam */
+            border-radius: 8px;
+            /* Sudut bulat (pilihan) */
+            text-align: center;
+            /* Pusatkan teks */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            /* Bayang untuk kesan 3D */
+            /* Lebar maksimum */
+            margin: 20px auto;
+            /* Pusatkan elemen secara automatik */
+        }
+
+
+        .main-title h1 {
+            font-size: 2rem;
+            color: black;
+            /* Saiz teks */
+            margin: 0;
+            /* Buang margin lalai */
+        }
+
+        .main-title1 {
+            background-color: white;
+            /* Warna latar belakang */
+            padding: 20px;
+            /* Ruang dalam */
+            text-align: center;
+            /* Pusatkan teks */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            /* Bayang untuk kesan 3D */
+            /* Lebar maksimum */
+            margin: 20px auto;
+            /* Pusatkan elemen secara automatik */
+        }
+
+        .main-title1 h1 {
+            font-size: 2rem;
+            color: black;
+            /* Saiz teks */
+            margin: 0;
+            /* Buang margin lalai */
+        }
+
+        .list p {
+            text-align: center;
+            color: white;
+            font-size: 3ch;
+        }
+
+        .main-title2 {
+            background-color: white;
+            /* Warna latar belakang */
+            color: #ffffff;
+            /* Warna teks */
+            padding: 20px;
+            /* Ruang dalam */
+            text-align: center;
+            /* Pusatkan teks */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            /* Bayang untuk kesan 3D */
+            /* Lebar maksimum */
+            margin: 20px auto;
+            /* Pusatkan elemen secara automatik */
+        }
+
+        .main-title2 h1 {
+            font-size: 2rem;
+            color: black;
+            /* Saiz teks */
+            margin: 0;
+            /* Buang margin lalai */
+        }
+
+        .main-title2 p {
+            font-size: 1.5rem;
+            color: black;
+            /* Saiz teks */
+            margin: 0;
+            text-align: left;
+        }
+
+        .box-container {
+            background-color: #f9f9f9;
+            /* Light grey background */
+            border: 2px solid #ccc;
+            /* Light border */
+            border-radius: 8px;
+            /* Rounded corners */
+            padding: 20px;
+            width: 80%;
+            /* Adjust width as needed */
+            margin: 0 auto;
+            /* Center the box */
+        }
+
+        /* Optional: Add a slight shadow to the box */
+        .box-container {
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-control {
+            color: black;
+            /* Medium grey */
+            font-weight: 400;
+            /* Normal font weight */
+        }
+
+        .form-label {
+            color: black;
+            /* Medium grey */
+            font-weight: 400;
+            /* Normal font weight */
+        }
+
+        ::placeholder {
+            color: #555555;
+            /* Medium grey */
+            font-weight: 400;
+            /* Normal font weight (if applicable) */
+        }
+
+        .info-text {
+            color: black;
+        }
+
+        /* FAQ Section Styling */
+        .faq-section {
+            margin-top: 40px;
+        }
+
+        .faq-section h2 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .faq {
+            background-color: #f1f1f1;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+        }
+
+        .faq-item .question {
+            color: black;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .faq-item .answer {
+            font-size: 16px;
+            margin-left: 20px;
+            color: #555;
+        }
+
+        /* Style for the footer */
+        footer {
+            background-color: #333;
+            /* Dark background */
+            color: #fff;
+            /* White text */
+            text-align: center;
+            /* Center the text */
+            padding: 10px 0;
+            /* Padding around the text */
+            font-size: 14px;
+            /* Adjust the font size */
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 40px;
+            /* Adds space between footer and content above */
+        }
+
+        footer p {
+            margin: 0;
+            /* Remove default margin */
+        }
+
+
+        #faq-new {
+            background-color: transparent;
+
+        }
+
+        /* Accordion Header */
+        #faqlist-new .accordion-header {
+            background-color: #28a745;
+            /* Green background for the header */
+            border: none;
+            /* Remove border */
+            border-radius: 8px 8px 0 0;
+            /* Rounded top corners */
+        }
+
+        #faqlist-new .accordion-header h3 {
+            background-color: #28a745;
+            /* Green background for the header */
+            border: none;
+            /* Remove border */
+            border-radius: 8px 8px 0 0;
+            /* Rounded top corners */
+        }
+
+        /* Button inside accordion header */
+        #faqlist-new .accordion-button {
+            font-size: 1.2rem;
+            /* Increase font size */
+            font-weight: bold;
+            /* Make the text bold */
+            color: #ffffff;
+            /* White text */
+            background-color: transparent;
+            /* Transparent background */
+            padding: 15px 20px;
+            /* More padding */
+            text-align: left;
+            /* Left align the text */
+            display: flex;
+            /* Use flexbox for alignment */
+            justify-content: space-between;
+            /* Space between text and icon */
+        }
+
+        /* Add hover effect to accordion button */
+        #faqlist-new .accordion-button:hover {
+            background-color: #218838;
+            /* Darker green on hover */
+            color: #ffffff;
+            /* Ensure text stays white on hover */
+        }
+
+        /* Style for the question icon */
+        .question-icon {
+            font-size: 1.5rem;
+            /* Increase icon size */
+            margin-right: 10px;
+            /* Space between icon and text */
+        }
+
+        /* Accordion Collapse */
+        #faqlist-new .accordion-collapse {
+            border: none;
+            /* Remove border */
+            background-color: #ffffff;
+            /* White background for the content */
+        }
+
+        /* Style for the body content of the accordion */
+        #faqlist-new .accordion-body {
+            padding: 20px;
+            /* Padding around the content */
+            background-color: #ffffff;
+            /* White background for content */
+            border: none;
+            /* Remove border */
+            border-radius: 0 0 8px 8px;
+            /* Rounded bottom corners */
+            font-weight: bold;
+            /* Make the content text bold */
+        }
+
+        /* List styling inside the accordion */
+        #faqlist-new .accordion-body ul {
+            padding-left: 20px;
+            /* Indentation for list items */
+        }
+
+        #faqlist-new .accordion-body li {
+            font-size: 1rem;
+            /* Slightly smaller text */
+            color: #333333;
+            /* Dark text for readability */
+            margin-bottom: 10px;
+            /* Space between list items */
+            font-weight: bold;
+            /* Make the list items bold */
+        }
+
+        /* Collapse icon style when opened */
+        #faqlist-new .accordion-button:not(.collapsed) {
+            background-color: #218838;
+            /* Change background when open */
+            color: #ffffff;
+            /* White text when open */
+        }
+
+        * Ensure that FAQ items are side by side */ #faq-new {
+            background-color: #f8f9fa;
+            /* Light background color */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: none;
+        }
+
+        .faq-column {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .faq-column .col-lg-6 {
+            flex: 0 0 48%;
+            /* Set each column to take up 48% of the space */
+            margin-right: 1%;
+            /* Adjust right margin */
+            margin-bottom: 20px;
+            /* Space between columns on smaller screens */
+        }
+
+        /* Adjust for smaller screens */
+        @media (max-width: 991px) {
+            .faq-column .col-lg-6 {
+                flex: 0 0 100%;
+                /* Stack them on top of each other on smaller screens */
+                margin-right: 0;
+                /* Remove margin on small screens */
+            }
+        }
+
+
+  /* Restrict styles to the upload component only */
+.upload-container {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top, #4F6072, #8699AA);
+    height: auto; /* Allow flexibility */
+    padding: 20px;
+  }
+  
+  /* Upload component styles */
+  .upload-container .upload {
+    position: relative;
+    width: 400px;
+    min-height: 445px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding-bottom: 20px;
+    background: #fff;
+    animation: fadeup 0.5s 0.5s ease both;
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  
+  .upload-container .upload header {
+    background: #4db6ac; /* Skin color */
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    text-align: center;
+  }
+  
+  .upload-container .upload header p {
+    color: #fff;
+    font-size: 40px;
+    margin: 0;
+    padding: 50px 0;
+  }
+  
+  .upload-container .upload header p i {
+    transform: translateY(20px);
+    opacity: 0;
+    font-size: 30px;
+    animation: fadeup 0.5s 1s ease both;
+  }
+  
+  .upload-container .upload .body {
+    text-align: center;
+    padding: 50px 0;
+    padding-bottom: 30px;
+  }
+  
+  .upload-container .upload .body i {
+    font-size: 65px;
+    color: lightgray;
+  }
+  
+  .upload-container .upload .body p {
+    font-size: 14px;
+    padding-top: 15px;
+    line-height: 1.4;
+  }
+  
+  .upload-container .upload footer {
+    width: 100%;
+    margin: 0 auto;
+    height: 0;
+  }
+  
+  .upload-container .upload footer .divider {
+    margin: 0 auto;
+    width: 0;
+    border-top: solid 4px darken(#4db6ac, 3.5%);
+    text-align: center;
+    overflow: hidden;
+    transition: width 0.5s ease;
+  }
+  
+  .upload-container .upload footer .list-files {
+    width: 320px;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding-left: 5px;
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 210px;
+  }
+  
+  /* Progress and File List */
+  .upload-container .upload footer .list-files .file {
+    width: 300px;
+    min-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .upload-container .upload footer .list-files .file .progress {
+    width: 175px;
+    height: 5px;
+    border: solid 1px lightgray;
+    border-radius: 2px;
+    background: linear-gradient(to left, rgba(77, 182, 172, 0.2), rgba(77, 182, 172, 0.8)) no-repeat;
+    background-size: 100% 100%;
+  }
+  
+  .upload-container .upload footer .importar {
+    width: 125px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    margin: auto;
+    border: solid 1px #4db6ac;
+    color: #4db6ac;
+    background: transparent;
+    padding: 8px 15px;
+    font-size: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Animations */
+  @keyframes fadeup {
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+
+        
+>>>>>>> 908753602cfbd1926760667ff9ee51c0d00498cb
