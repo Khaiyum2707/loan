@@ -367,8 +367,6 @@
                         <div class="mb-3">
                             <label for="formFileMultiple" class="form-label">Muat Naik fail-fail di sini</label>
                         <div class="mb-3">
-                            <label for="formFileMultiple" class="form-label">Upload Files</label>
-
                             <input class="form-control" type="file" id="formFileMultiple" name="files[]"
                                 multiple>
                             <div id="fileError" class="text-danger mt-1" style="display: none;">All files must be in
@@ -404,7 +402,7 @@
             /* Slightly darker shade */
         }
     </style>
-    
+
     <footer>
         <p>© Hak Cipta Terpelihara 2024 -<a href="https://idsb.com.my" class="custom-link">I.Destinasi Sdn. Bhd.</a></p>
     </footer>
