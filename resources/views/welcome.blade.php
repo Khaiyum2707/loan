@@ -325,21 +325,22 @@
             <!-- Right Side: Form -->
             <div class="col-md-6 d-flex"> <!-- Add d-flex to ensure the div stretches -->
                 <div id="formsection" class="p-4 border rounded bg-light w-100"> 
-                    <h4 class="mb-3" style="color: black; font-weight: 600;">Borang Maklumat Anda</h4>
+                    <h3 class="mb-3" style="color: black; font-weight: 700;">Borang Maklumat Anda</h3>
+                    <p class="info-text">Sila isi borang dengan maklumat yang tepat. Semua medan bertanda * adalah wajib. Digalakkan muat naik file anda dalam bentuk zip atau rar.</p>
 
-                    <form action="{{ route('formSubmit') }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('formSubmit') }}" method="POST" enctype="multipart/form-data" style="margin-top:-1.0rem">
                         @csrf
 
                         <!-- Name input field -->
                         <div class="mb-3">
-                            <label for="exampleFormControlName" class="form-label">Nama</label>
+                            <label for="exampleFormControlName" class="form-label">Nama<b>*</b></label>
                             <input type="text" class="form-control" id="exampleFormControlName" name="name"
                                 required placeholder="Nama Penuh">
                         </div>
 
                         <!-- IC Number input field -->
                         <div class="mb-3">
-                            <label for="exampleFormControlIC" class="form-label">Nombor IC</label>
+                            <label for="exampleFormControlIC" class="form-label">Nombor IC<b>*</b></label>
                             <input type="text" class="form-control" id="exampleFormControlIC" name="ic"
                                 placeholder="tanpa (-)" pattern="\d{12}"
                                 title="IC Number must be exactly 12 digits" required>
@@ -350,14 +351,14 @@
 
                         <!-- Email input field -->
                         <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Alamat Emel</label>
+                            <label for="exampleFormControlInput1" class="form-label">Alamat Emel<b>*</b></label>
                             <input type="email" class="form-control" id="exampleFormControlInput1" name="email"
                                 required>
                         </div>
 
                         <!-- Phone number input field -->
                         <div class="mb-3">
-                            <label for="exampleFormControlInput2" class="form-label">Nombor Telefon Bimbit</label>
+                            <label for="exampleFormControlInput2" class="form-label">Nombor Telefon Bimbit<b>*</b></label>
                             <input type="tel" class="form-control" id="exampleFormControlInput2" name="phone"
                                 placeholder="tanpa (-). Eg: 0123456789" required>
                         </div>
@@ -365,12 +366,12 @@
                         <!-- File upload field -->
 
                         <div class="mb-3">
-                            <label for="formFileMultiple" class="form-label">Muat Naik fail-fail di sini</label>
+                            <label for="formFileMultiple" class="form-label">Muat Naik fail di sini<b>*</b></label>
                         <div class="mb-3">
                             <input class="form-control" type="file" id="formFileMultiple" name="files[]"
                                 multiple>
                             <div id="fileError" class="text-danger mt-1" style="display: none;">All files must be in
-                                PDF format.</div>
+                                PDF, ZIP or RAR format.</div>
                         </div> 
                           
 

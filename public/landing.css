@@ -440,5 +440,11 @@ footer p {
       transform: rotate(1turn);
     }
   }
+
+  .info-text {
+    color: #6c757d; /* Grey color */
+    font-size: 0.9rem; /* Small font size */
+    margin-top: -0.9rem; /* Optional spacing adjustment */
+}
   
   

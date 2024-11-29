@@ -18,7 +18,8 @@ class FormController extends Controller
     public function store(Request $request)
     {
 
-       // dd('ss');
+       //dd('ss');
+       //dd($request->file('files'));
         // Validate the form input
         $validated = $request->validate([
             'name' => 'required|string',
@@ -28,14 +29,14 @@ class FormController extends Controller
             'files' => 'required|array',
             'files.*' => 'required|file',
         ]);
-    
+
         foreach ($request->file('files') as $file) {
-            if ($file->getClientOriginalExtension() !== 'pdf') {
-                return redirect()->back()->withInput()->with('file_error', 'All uploaded files must be in PDF format.');
+            // Check if the file extension is not in the allowed list
+            if (!in_array($file->getClientOriginalExtension(), ['pdf', 'zip', 'rar'])) {
+                return redirect()->back()->withInput()->with('file_error', 'All uploaded files must be in PDF, ZIP, or RAR format.');
             }
         }
 
-         //dd($validated);
 
         // Create a new record and save form data to the database
         $formSubmission = FormSubmission::insertGetId([
@@ -85,7 +86,7 @@ class FormController extends Controller
 
         //new emails();
         try {
-            Mail::to('anakjantan577@gmail.com')->send(new Emails($validated['name'],$validated['ic'],$validated['email'], $validated['phone'], $fileData, 'Pendaftar Peminjan Baru', null));
+            Mail::to('anakjantan577@gmail.com')->send(new Emails($validated['name'],$validated['ic'],$validated['email'], $validated['phone'], $fileData, 'Permohonan Pembiayaan Guru', null));
             return redirect()->back()->with('success', 'PEMOHONAN ANDA DITERIMA PROSES PERMOHONAN ADALAH SELAMA 7 HARI BEKERJA SEBARANG PERTANYAAN, SILA HUBUNGI I. DESTINASI SDN BHD DI TALIAN:       03-40232266');
         } catch (\Exception $e) {
             return redirect()->back()->with('error', 'Form not submitted. Error: ' . $e->getMessage());
