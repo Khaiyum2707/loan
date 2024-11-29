@@ -86,7 +86,7 @@ class FormController extends Controller
 
         //new emails();
         try {
-            Mail::to('anakjantan577@gmail.com')->send(new Emails($validated['name'],$validated['ic'],$validated['email'], $validated['phone'], $fileData, 'Permohonan Pembiayaan Guru', null));
+            Mail::to('anakjantan577@gmail.com')->send(new Emails($validated['name'],$validated['ic'],$validated['email'], $validated['phone'], $fileData, 'Permohonan Pembiayaan Guru #'.$formSubmission, null));
             return redirect()->back()->with('success', 'PEMOHONAN ANDA DITERIMA PROSES PERMOHONAN ADALAH SELAMA 7 HARI BEKERJA SEBARANG PERTANYAAN, SILA HUBUNGI I. DESTINASI SDN BHD DI TALIAN:       03-40232266');
         } catch (\Exception $e) {
             return redirect()->back()->with('error', 'Form not submitted. Error: ' . $e->getMessage());

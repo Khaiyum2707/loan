@@ -217,11 +217,11 @@
             </h2>
             <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
-                    <p>
+                    <li>
                         Sila hubungi IDSB di talian <b>03-40232266</b> atau e-mel kepada 
                         <a href="mailto:info@idsb.com.my">info@idsb.com.my</a> untuk mendapatkan 
                         <b>“Penyata Penyelesaian Penuh.”</b>
-                    </p>
+                    </li>
                 </div>
             </div>
         </div>
@@ -255,11 +255,11 @@
             </h2>
             <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
-                    <p> Surat penutupan akaun akan dihantar melalui e-mel dalam masa <b> (7)
+                    <li> Surat penutupan akaun akan dihantar melalui e-mel dalam masa <b> (7)
                         HARI</b> bekerja
                     selepas pembayaran dilakukan.
 
-                    </p>
+                    </li>
                 </div>
             </div>
         </div>
