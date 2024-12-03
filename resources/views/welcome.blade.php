@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap Page</title>
+    <title>Permohonan Pembiayaan Guru</title>
+    <link rel="icon" href="{{ asset('favicon.png') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
         crossorigin="anonymous"></script>
@@ -260,6 +261,20 @@
                     selepas pembayaran dilakukan.
 
                     </li>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingSix">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                    <b>Panduan muat naik fail</b>
+                </button>
+            </h2>
+            <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <li>Jika memuat naik fail satu per satu, pastikan dokumen tersebut di dalam format <b>PDF</b></li>
+                    <li>Jika memuat naik fail di dalam format <b>ZIP</b> atau <b>RAR</b>, namakan fail anda dengan <b>NAMA</b> dan <b>IC</b> anda. </li>
                 </div>
             </div>
         </div>
