@@ -312,6 +312,10 @@
                                         'file' => 'BORANG KEBENARAN SEMAKAN MAKLUMAT KREDIT.pdf',
                                     ],
                                     [
+                                        'name' => 'Borang Kebenaran Potongan Gaji',
+                                        'file' => 'BORANG KEBENARAN POTONGAN GAJI.pdf',
+                                    ],
+                                    [
                                         'name' => 'Contoh Pengisian Borang Lengkap',
                                         'file' => 'CONTOH PENGISIAN BORANG LENGKAP.pdf',
                                     ],
