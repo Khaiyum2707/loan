@@ -385,7 +385,7 @@
                         <!-- File upload field -->
 
                         <div class="mb-3">
-                            <label for="formFileMultiple" class="form-label">Muat Naik fail di sini<b>*</b></label>
+                            <label for="formFileMultiple" class="form-label">Muat Naik fail di sini<b>*</b>.Maximum saiz file = 10MB.</label>
                             <input class="form-control" type="file" id="formFileMultiple" name="files[]" multiple>
                             <div id="fileError" class="text-danger mt-2" style="display: none;">
                                 All files must be 10MB or below. Please select valid files.
