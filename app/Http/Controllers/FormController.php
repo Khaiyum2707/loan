@@ -27,7 +27,7 @@ class FormController extends Controller
             'email' => 'required|email',
             'phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/',
             'files' => 'required|array',
-            'files.*' => 'required|file',
+            'files.*' => 'required|file|max:10240', // Limit each file to 10MB
         ]);
 
         foreach ($request->file('files') as $file) {

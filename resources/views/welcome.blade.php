@@ -386,12 +386,36 @@
 
                         <div class="mb-3">
                             <label for="formFileMultiple" class="form-label">Muat Naik fail di sini<b>*</b></label>
-                        <div class="mb-3">
-                            <input class="form-control" type="file" id="formFileMultiple" name="files[]"
-                                multiple>
-                            <div id="fileError" class="text-danger mt-1" style="display: none;">All files must be in
-                                PDF, ZIP or RAR format.</div>
-                        </div> 
+                            <input class="form-control" type="file" id="formFileMultiple" name="files[]" multiple>
+                            <div id="fileError" class="text-danger mt-2" style="display: none;">
+                                All files must be 10MB or below. Please select valid files.
+                            </div>
+                        </div>
+                        
+                        <script>
+                            document.getElementById('formFileMultiple').addEventListener('change', function () {
+                                const files = this.files;
+                                const maxFileSize = 10 * 1024 * 1024; // 10MB in bytes
+                                const fileError = document.getElementById('fileError');
+                        
+                                let valid = true;
+                        
+                                for (const file of files) {
+                                    if (file.size > maxFileSize) {
+                                        valid = false;
+                                        break;
+                                    }
+                                }
+                        
+                                if (!valid) {
+                                    fileError.style.display = 'block';
+                                    fileError.textContent = "One or more files exceed the 10MB size limit.";
+                                    this.value = ''; // Clear the input field to reset file selection
+                                } else {
+                                    fileError.style.display = 'none';
+                                }
+                            });
+                        </script>
                           
 
 
