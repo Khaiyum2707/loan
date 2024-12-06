@@ -385,11 +385,12 @@
                         <!-- File upload field -->
 
                         <div class="mb-3">
-                            <label for="formFileMultiple" class="form-label">Muat Naik fail di sini<b>*</b>.Maximum saiz file = 10MB.</label>
+                            <label for="formFileMultiple" class="form-label">Muat Naik fail di sini.* </label>
                             <input class="form-control" type="file" id="formFileMultiple" name="files[]" multiple>
                             <div id="fileError" class="text-danger mt-2" style="display: none;">
                                 All files must be 10MB or below. Please select valid files.
                             </div>
+                            <p class="small-text">Maksimum saiz file = 10MB.</p> 
                         </div>
                         
                         <script>
@@ -423,6 +424,7 @@
                         <!-- Submit button -->
                         <button type="submit" class="btn btn-primary">Hantar</button>
                     </form>
+                    
 
 
                 </div>
