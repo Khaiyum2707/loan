@@ -60,7 +60,7 @@ class Emails extends Mailable
                 'email' => $this->email,
                 'phone' => $this->phone,
                 'message1' => $this->message1,
-                //'file' => $this->file,
+                'file' => $this->file,
             ],
         );
        
@@ -86,6 +86,7 @@ class Emails extends Mailable
             if (file_exists($filePath['path'])) {
                 $attachments[] = Attachment::fromPath($filePath['path'])->as(basename($filePath['name']));
             }
+           //dd($attachments);
         }
     }
 

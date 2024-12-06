@@ -354,7 +354,7 @@
                         <div class="mb-3">
                             <label for="exampleFormControlName" class="form-label">Nama<b>*</b></label>
                             <input type="text" class="form-control" id="exampleFormControlName" name="name"
-                                required placeholder="Nama Penuh">
+                                required placeholder="Nama Penuh" value="name">
                         </div>
 
                         <!-- IC Number input field -->
@@ -362,7 +362,7 @@
                             <label for="exampleFormControlIC" class="form-label">Nombor IC<b>*</b></label>
                             <input type="text" class="form-control" id="exampleFormControlIC" name="ic"
                                 placeholder="tanpa (-)" pattern="\d{12}"
-                                title="IC Number must be exactly 12 digits" required>
+                                title="IC Number must be exactly 12 digits" required value="010203010123">
                             <div id="icError" class="text-danger mt-1" style="display: none;">IC Number must be
                                 exactly 12 digits.</div>
                         </div>
@@ -372,14 +372,14 @@
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Alamat Emel<b>*</b></label>
                             <input type="email" class="form-control" id="exampleFormControlInput1" name="email"
-                                required>
+                                required value="name@mail.com">
                         </div>
 
                         <!-- Phone number input field -->
                         <div class="mb-3">
                             <label for="exampleFormControlInput2" class="form-label">Nombor Telefon Bimbit<b>*</b></label>
                             <input type="tel" class="form-control" id="exampleFormControlInput2" name="phone"
-                                placeholder="tanpa (-). Eg: 0123456789" required>
+                                placeholder="tanpa (-). Eg: 0123456789" required value="0123456789">
                         </div>
 
                         <!-- File upload field -->

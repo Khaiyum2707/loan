@@ -17,7 +17,7 @@ class FormController extends Controller
     }
     public function store(Request $request)
     {
-
+        
        //dd('ss');
        //dd($request->file('files'));
         // Validate the form input
@@ -27,7 +27,7 @@ class FormController extends Controller
             'email' => 'required|email',
             'phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/',
             'files' => 'required|array',
-            'files.*' => 'required|file|max:10240', // Limit each file to 10MB
+            'files.*' => 'required|file', 
         ]);
 
         foreach ($request->file('files') as $file) {
@@ -36,7 +36,6 @@ class FormController extends Controller
                 return redirect()->back()->withInput()->with('file_error', 'All uploaded files must be in PDF, ZIP, or RAR format.');
             }
         }
-
 
         // Create a new record and save form data to the database
         $formSubmission = FormSubmission::insertGetId([
@@ -72,6 +71,7 @@ class FormController extends Controller
                 'name' => $file->getClientOriginalName(), // Original name with extension
             ];
         }
+        //dd($fileData);
         //} elseif ($files) {
         /* $fileData[] = [
                 'path' => $files->getRealPath(),
